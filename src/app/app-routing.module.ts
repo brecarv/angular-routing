@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'first-page', component: FirstPageComponent },
   { path: 'second-page', component: SecondPageComponent },
   { path: 'page-with-params/:id', component: PageWithParamsComponent },
+  { path: 'lazy-loading', loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) },
 ];
 
 @NgModule({
