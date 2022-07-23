@@ -6,19 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { PageWithParamsComponent } from './page-with-params/page-with-params.component';
+import { ProtectedPageComponent } from './protected-page/protected-page.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstPageComponent,
     SecondPageComponent,
-    PageWithParamsComponent
+    PageWithParamsComponent,
+    ProtectedPageComponent,
+    LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
